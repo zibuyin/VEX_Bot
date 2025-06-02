@@ -10,8 +10,11 @@ from discord import app_commands
 from numpy.f2py.capi_maps import lcb_map
 
 load_dotenv()
-token = os.getenv("DISCORD_TOKEN")
-api_key = os.getenv("RE_API_KEY")  # 你的 Robot Events API Key
+# token = os.getenv("DISCORD_TOKEN")
+# api_key = os.getenv("RE_API_KEY")  # 你的 Robot Events API Key
+
+token = input("DISCORD_TOKEN: ")
+api_key = input("RE_API_KEY: ")  # 你的 Robot Events API Key
 
 handler = logging.FileHandler(filename="discord.log", encoding="utf-8", mode="w")
 logging.basicConfig(level=logging.DEBUG, handlers=[handler])
